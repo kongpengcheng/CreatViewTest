@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--name 是自定义属性名，一般采用驼峰命名，可以随意。 format 是属性的单位-->
+    <attr name="titleSize" format="dimension"></attr>
+    <attr name="titleText" format="string"></attr>
+    <attr name="titleColor" format="color"></attr>
+    <attr name="titleBackgroundColor" format="color"></attr>
+
+    <!--name 是自定义控件的类名-->
+    <declare-styleable name="MyCustomView">
+        <attr name="titleSize"></attr>
+        <attr name="titleText"></attr>
+        <attr name="titleColor"></attr>
+        <attr name="titleBackgroundColor"></attr>
+    </declare-styleable>
+    <!--自定义属性分两步：
+    1.定义公共属性
+    2.定义控件的主题样式
+
+    如上面的xml文件第一部分是公共的属性，第二部分是自定义控件MyCustomView的主题样式，该主题样式里的属性必须包含在公共属性里面。言外之意就是公共属性可以被多个自定义控件主题样式使用。有些人可能会纠结format字段后面都有哪些属性单位？如果你是使用AS开发的话IDE会自动有提示，基本包括如下：
+     dimension（字体大小）string（字符串）color（颜色）boolean（布尔类型）float（浮点型）integer（整型）enmu（枚举）fraction（百分比）等。
+    -->
+
+</resources>
